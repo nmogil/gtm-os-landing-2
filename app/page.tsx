@@ -13,10 +13,13 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Features />
-      <HowItWorks />
-      <CodeExample />
-      <Benefits />
+      {/* Solid black background for content sections to improve readability */}
+      <div className="relative bg-gradient-to-b from-black/0 via-black to-black pt-24 -mt-24 z-10">
+        <Features />
+        <HowItWorks />
+        <CodeExample />
+        <Benefits />
+      </div>
       <WaitlistCTA />
       <Footer />
       <Leva hidden />
