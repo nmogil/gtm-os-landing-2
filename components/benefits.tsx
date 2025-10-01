@@ -1,7 +1,5 @@
 "use client";
 
-import { Pill } from "./pill";
-
 const benefits = [
   {
     metric: "10 min",
@@ -44,7 +42,6 @@ export function Benefits() {
   return (
     <section id="benefits" className="relative py-24 md:py-32 container">
       <div className="text-center mb-16 md:mb-20">
-        <Pill className="mb-6">VALUE</Pill>
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-sentient">
           Ship lifecycle emails <br className="hidden sm:inline" />
           <i className="font-light">today</i>, not next quarter

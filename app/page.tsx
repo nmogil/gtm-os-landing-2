@@ -1,5 +1,6 @@
 'use client'
 
+import dynamic from "next/dynamic";
 import { Hero } from "@/components/hero";
 import { Features } from "@/components/features";
 import { HowItWorks } from "@/components/how-it-works";
@@ -7,7 +8,11 @@ import { CodeExample } from "@/components/code-example";
 import { Benefits } from "@/components/benefits";
 import { WaitlistCTA } from "@/components/waitlist-cta";
 import { Footer } from "@/components/footer";
-import { Leva } from "leva";
+
+// Lazy load Leva debug panel
+const Leva = dynamic(() => import("leva").then((mod) => mod.Leva), {
+  ssr: false,
+});
 
 export default function Home() {
   return (

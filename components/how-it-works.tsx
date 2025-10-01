@@ -1,6 +1,7 @@
 "use client";
 
-import { Pill } from "./pill";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const steps = [
   {
@@ -43,7 +44,6 @@ export function HowItWorks() {
     <section id="how-it-works" className="relative py-24 md:py-32 bg-[#0a0a0a]/30">
       <div className="container">
         <div className="text-center mb-16 md:mb-20">
-          <Pill className="mb-6">HOW IT WORKS</Pill>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-sentient">
             Three API calls. <br className="sm:hidden" />
             <i className="font-light">That's it.</i>
@@ -75,15 +75,31 @@ export function HowItWorks() {
               </div>
               
               <div className={`${index % 2 === 1 ? 'md:order-1' : ''}`}>
-                <div className="bg-[#0a0a0a] border border-border p-6 font-mono text-sm">
-                  <div className="flex items-center gap-2 mb-4 pb-3 border-b border-border/50">
+                <div className="bg-[#0a0a0a] border border-border">
+                  <div className="flex items-center gap-2 px-6 py-4 border-b border-border/50">
                     <div className="w-3 h-3 rounded-full bg-[#ff5f56]" />
                     <div className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
                     <div className="w-3 h-3 rounded-full bg-[#27c93f]" />
                   </div>
-                  <pre className="text-foreground/80 overflow-x-auto">
-                    <code>{step.code}</code>
-                  </pre>
+                  <div className="overflow-x-auto">
+                    <SyntaxHighlighter
+                      language="json"
+                      style={oneDark}
+                      customStyle={{
+                        margin: 0,
+                        padding: "1.5rem",
+                        background: "transparent",
+                        fontSize: "0.875rem",
+                      }}
+                      codeTagProps={{
+                        style: {
+                          fontFamily: "var(--font-geist-mono), monospace",
+                        },
+                      }}
+                    >
+                      {step.code}
+                    </SyntaxHighlighter>
+                  </div>
                 </div>
               </div>
             </div>

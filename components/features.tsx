@@ -1,6 +1,5 @@
 "use client";
 
-import { Pill } from "./pill";
 import { Sparkles, Clock, Key, Zap, Target, Rocket } from "lucide-react";
 
 const features = [
@@ -40,7 +39,6 @@ export function Features() {
   return (
     <section id="features" className="relative py-24 md:py-32 container">
       <div className="text-center mb-16 md:mb-20">
-        <Pill className="mb-6">FEATURES</Pill>
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-sentient">
           Built for <i className="font-light">developers</i>
         </h2>

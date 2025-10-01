@@ -1,10 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { GL } from "./gl";
+import dynamic from "next/dynamic";
 import { Pill } from "./pill";
 import { Button } from "./ui/button";
 import { useState } from "react";
+
+// Lazy load the GL component to reduce initial bundle size and memory usage
+const GL = dynamic(() => import("./gl").then((mod) => ({ default: mod.GL })), {
+  ssr: false,
+  loading: () => <div className="fixed inset-0 bg-black" />,
+});
 
 export function Hero() {
   const [hovering, setHovering] = useState(false);
@@ -19,7 +25,7 @@ export function Hero() {
             Email journeys that <br />
             <i className="font-light">write themselves</i>
           </h1>
-          <p className="font-mono text-sm sm:text-base text-foreground/60 text-balance text-center mt-8 max-w-[520px] mx-auto">
+          <p className="font-mono text-sm sm:text-base text-foreground/80 text-balance text-center mt-8 max-w-[520px] mx-auto">
             One API call generates multi-step email campaigns. <br className="hidden sm:inline" />
             AI-powered copywriting. Developer-first infrastructure.
           </p>

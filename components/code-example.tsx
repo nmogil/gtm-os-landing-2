@@ -1,11 +1,13 @@
 "use client";
 
-import { Pill } from "./pill";
 import { useState } from "react";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const examples = [
   {
     label: "Node.js",
+    language: "javascript",
     code: `// Generate an email journey
 const response = await fetch('https://api.gtmos.dev/journeys', {
   method: 'POST',
@@ -25,6 +27,7 @@ const { journey_id, stages } = await response.json();
   },
   {
     label: "Python",
+    language: "python",
     code: `# Enroll a contact into journey
 import requests
 
@@ -48,6 +51,7 @@ enrollment = response.json()
   },
   {
     label: "cURL",
+    language: "bash",
     code: `# Stop sends on conversion
 curl -X POST https://api.gtmos.dev/events \\
   -H "X-API-Key: $GTM_OS_KEY" \\
@@ -69,7 +73,6 @@ export function CodeExample() {
     <section id="example" className="relative py-24 md:py-32 bg-[#0a0a0a]/30">
       <div className="container">
         <div className="text-center mb-16 md:mb-20">
-          <Pill className="mb-6">EXAMPLE</Pill>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-sentient">
             See it in <i className="font-light">action</i>
           </h2>
@@ -101,10 +104,24 @@ export function CodeExample() {
               <div className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
               <div className="w-3 h-3 rounded-full bg-[#27c93f]" />
             </div>
-            <div className="p-6 overflow-x-auto">
-              <pre className="font-mono text-sm text-foreground/80">
-                <code>{examples[activeTab].code}</code>
-              </pre>
+            <div className="overflow-x-auto">
+              <SyntaxHighlighter
+                language={examples[activeTab].language}
+                style={oneDark}
+                customStyle={{
+                  margin: 0,
+                  padding: "1.5rem",
+                  background: "transparent",
+                  fontSize: "0.875rem",
+                }}
+                codeTagProps={{
+                  style: {
+                    fontFamily: "var(--font-geist-mono), monospace",
+                  },
+                }}
+              >
+                {examples[activeTab].code}
+              </SyntaxHighlighter>
             </div>
           </div>
         </div>
