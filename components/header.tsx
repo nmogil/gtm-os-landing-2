@@ -10,18 +10,18 @@ export const Header = () => {
           <Logo className="w-[100px] md:w-[120px]" />
         </Link>
         <nav className="flex max-lg:hidden absolute left-1/2 -translate-x-1/2 items-center justify-center gap-x-10">
-          {["About", "Portfolio", "Insights", "Contact"].map((item) => (
+          {["Features", "How It Works", "Example", "Benefits"].map((item) => (
             <Link
-              className="uppercase inline-block font-mono text-foreground/60 hover:text-foreground/100 duration-150 transition-colors ease-out"
-              href={`#${item.toLowerCase()}`}
+              className="uppercase inline-block font-mono text-foreground/60 hover:text-foreground/100 duration-150 transition-colors ease-out text-xs"
+              href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
               key={item}
             >
               {item}
             </Link>
           ))}
         </nav>
-        <Link className="uppercase max-lg:hidden transition-colors ease-out duration-150 font-mono text-primary hover:text-primary/80" href="/#sign-in">
-          Sign In
+        <Link className="uppercase max-lg:hidden transition-colors ease-out duration-150 font-mono text-primary hover:text-primary/80 text-xs" href="/#waitlist">
+          Join Waitlist
         </Link>
         <MobileMenu />
       </header>

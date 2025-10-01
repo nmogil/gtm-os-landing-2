@@ -10,9 +10,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Skal Ventures",
-  description: "Investment strategies that outperform the market",
-    generator: 'v0.app'
+  title: "GTM OS - AI-Generated Email Journeys",
+  description: "Developer-first email automation. One API call generates complete lifecycle campaigns. Built for B2B SaaS teams.",
+  generator: 'v0.app'
 };
 
 export default function RootLayout({

@@ -13,32 +13,33 @@ export function Hero() {
       <GL hovering={hovering} />
 
       <div className="pb-16 mt-auto text-center relative">
-        <Pill className="mb-6">BETA RELEASE</Pill>
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-sentient">
-          Unlock your <br />
-          <i className="font-light">future</i> growth
+        <Pill className="mb-6">COMING SOON</Pill>
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-sentient leading-tight">
+          Email journeys that <br />
+          <i className="font-light">write themselves</i>
         </h1>
-        <p className="font-mono text-sm sm:text-base text-foreground/60 text-balance mt-8 max-w-[440px] mx-auto">
-          Through perpetual investment strategies that outperform the market
+        <p className="font-mono text-sm sm:text-base text-foreground/60 text-balance mt-8 max-w-[520px] mx-auto">
+          One API call generates multi-step email campaigns. <br className="hidden sm:inline" />
+          AI-powered copywriting. Developer-first infrastructure.
         </p>
 
-        <Link className="contents max-sm:hidden" href="/#contact">
+        <Link className="contents max-sm:hidden" href="/#waitlist">
           <Button
             className="mt-14"
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
           >
-            [Contact Us]
+            [Join Waitlist]
           </Button>
         </Link>
-        <Link className="contents sm:hidden" href="/#contact">
+        <Link className="contents sm:hidden" href="/#waitlist">
           <Button
             size="sm"
             className="mt-14"
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
           >
-            [Contact Us]
+            [Join Waitlist]
           </Button>
         </Link>
       </div>
