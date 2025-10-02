@@ -24,7 +24,7 @@ export function Footer() {
         </div>
         
         <div className="mt-8 pt-8 border-t border-border/20 text-center font-mono text-xs text-foreground/40">
-          © 2025 GTM OS. Built for developers who ship.
+          © 2025 Mogil Ventures,LLC. Built for developers who ship.
         </div>
       </div>
     </footer>

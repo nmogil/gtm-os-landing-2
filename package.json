@@ -1,5 +1,5 @@
 {
-  "name": "my-v0-project",
+  "name": "gtm-os-landing",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -25,6 +25,7 @@
     "next": "15.2.4",
     "next-themes": "latest",
     "react-syntax-highlighter": "^15.6.6",
+    "resend": "^6.1.2",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
     "three": "latest"

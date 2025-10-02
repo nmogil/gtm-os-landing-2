@@ -1,30 +1,46 @@
-# Archive
+# GTM OS Landing Page
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
-
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/shared-8867s-projects/v0-archive)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/7OBKdWwIbzR)
+Email journeys that write themselves.
 
 ## Overview
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+A Next.js landing page for GTM OS - an AI-powered email journey platform that generates multi-step email campaigns with a single API call.
 
-## Deployment
+## Features
 
-Your project is live at:
+- 3D particle animation background using Three.js
+- Responsive design with Tailwind CSS
+- Dark theme
+- Waitlist signup functionality
 
-**[https://vercel.com/shared-8867s-projects/v0-archive](https://vercel.com/shared-8867s-projects/v0-archive)**
+## Tech Stack
 
-## Build your app
+- Next.js 15
+- React
+- TypeScript
+- Three.js / React Three Fiber
+- Tailwind CSS
+- Radix UI components
 
-Continue building your app on:
+## Getting Started
 
-**[https://v0.app/chat/projects/7OBKdWwIbzR](https://v0.app/chat/projects/7OBKdWwIbzR)**
+Install dependencies:
 
-## How It Works
+```bash
+npm install
+```
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+Run the development server:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Build
+
+```bash
+npm run build
+npm start
+```

@@ -1,11 +1,8 @@
 "use client";
 
-import { Button } from "./ui/button";
-import { useState } from "react";
+import { SignupForm } from "./signup-form";
 
 export function WaitlistCTA() {
-  const [hovering, setHovering] = useState(false);
-
   return (
     <section id="waitlist" className="relative py-24 md:py-32 container">
       <div className="max-w-4xl mx-auto text-center border border-primary/20 bg-primary/5 backdrop-blur-sm p-12 md:p-16">
@@ -16,13 +13,7 @@ export function WaitlistCTA() {
         <p className="font-mono text-sm sm:text-base text-foreground/60 mb-10 max-w-[500px] mx-auto">
           Join the waitlist for early access. We're launching with design partners in Q4 2025.
         </p>
-        <Button
-          size="default"
-          onMouseEnter={() => setHovering(true)}
-          onMouseLeave={() => setHovering(false)}
-        >
-          [Join the Waitlist]
-        </Button>
+        <SignupForm />
         <p className="font-mono text-xs text-foreground/40 mt-8">
           For Seed → Series A B2B SaaS teams
         </p>
