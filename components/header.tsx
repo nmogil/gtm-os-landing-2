@@ -32,7 +32,7 @@ export const Header = () => {
           />
         </Link>
         <nav className="flex max-lg:hidden absolute left-1/2 -translate-x-1/2 items-center justify-center gap-x-10">
-          {["Features", "How It Works", "Example", "Benefits"].map((item) => (
+          {["Features", "How It Works", "Benefits"].map((item) => (
             <Link
               className={`uppercase inline-block font-mono duration-150 transition-colors ease-out text-xs ${
                 isScrolled
